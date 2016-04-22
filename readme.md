@@ -34,7 +34,8 @@ Available tasks
 
 ## Run Desktop App
 
-This will run the current application as an Electron desktop app.
+This will execute the Electron desktop app.
+
 An icon will appear in your OS tray, with a couple menu options.
 
 ```
