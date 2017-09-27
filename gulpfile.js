@@ -15,8 +15,8 @@ var sequence = require('run-sequence');
  ***********************/
 
 var root = __dirname + '/';
-var core = root + 'public/';
 var dist = root + 'dist/';
+var core = root + 'public/';
 var docs = root + 'gh-pages/';
 var app  = core + 'app/';
 
@@ -249,6 +249,7 @@ gulp.task('bundle', 'Compile static bundles, takes optional -g argument', functi
     var minimist = require('minimist');
     var options = minimist(process.argv.slice(2));
     var config = require(paths.config.bundle);
+    var jspm = require('jspm');
     var Bundler = require('jspm-bundler');
     var bundler = new Bundler(config);
     return bundler.bundle(options.g).catch(function (e) {
